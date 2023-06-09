@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 class DiceGame {
     int value;
@@ -23,6 +23,25 @@ class DiceGame {
         System.out.println("Dice 2: " + d2.getInt());
         int totalValue = d1.getInt() + d2.getInt();
         System.out.println("Total value: " + totalValue);
+        if(totalValue > 7){
+            System.out.println(g.getName() + " won!");    
+        }
+        else{
+            System.out.println(g.getName() + " lost!");    
+        }
+    }
+}
 
+class Greetings{
+    String name;
+    Greetings(){
+        System.out.println("What is your name?");
+        Scanner scanner = new Scanner(System.in);
+        name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+    }
+
+    String getName(){
+        return name;
     }
 }
